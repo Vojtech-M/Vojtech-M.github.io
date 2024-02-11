@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Test of web on Github</title>
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+
+</head>
+
+
+<body>
+<a href= "https://mapy.cz/zakladni?x=15.6252330&y=49.8022514&z=8"> Tohle je link</a>
+
+<pre>
+tag pre 
+
+zanechá text 
+
+ve stejné podobě
+
+
+i s mezearami
+
+
+
+</pre>
+
+</body>
+</html>

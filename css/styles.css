@@ -14,40 +14,11 @@ header {
     padding: 4rem;
 }
 
-.hero-image {
-    display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("https://vojtech-m.github.io/img/front_page.jpg");
-    height: 80%;
-    min-height: 25%; 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    align-items: flex-end; 
-    justify-content: center;
-    align-content: center;
-    
+#front_page_image {
+width: 100%;
+max-height: 50%;
+
 }
-
-
-.hero-heading {
-    font-size: 6vw;
-    color: white;
-    text-align: center; 
-    padding: 8%;
-    line-height: 0.01;
-    padding-bottom:200px;
-    text-shadow: 2px 2px 1px black; 
-}
-
-.hero-text {
-    font-size: 3vw;
-    color: #BBE1FA;
-    padding: 0px 20px;
-    margin: 0%;
-    text-align: right;
-}
-
 
 
 
@@ -81,4 +52,79 @@ article {
     margin: 0 20px; 
     padding: 20px;
     text-align: justify;
+}
+
+
+
+
+/* Základní styly */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigace */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 15px;
+}
+
+/* Seznam navigačních odkazů */
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Hamburger tlačítko */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    background: white;
+    height: 3px;
+    width: 25px;
+    margin: 5px 0;
+}
+
+/* Responsivní styl */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #333;
+        text-align: center;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        padding: 15px 0;
+    }
 }

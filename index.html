@@ -12,18 +12,7 @@
    
 <header>
 </header>
-
-
-<div class="hero-image">
-    <div class="hero-heading ">
-        <!-- <h2 class>Rychlost</h2>
-        <div class="hero-text">
-            <p>je naše vášeň!</p>
-        </div> -->
-    </div>
-</div>
-
-
+<img id="front_page_image"src="./img/front_page.jpg">
 
 <article>
     <div class="left_text">
@@ -39,6 +28,18 @@
 
 
 
+<div class="mobile_screens">
+    <ul class="menu">
+        <li><a class="menuItem" href="price_list.php">Ceník</a></li>
+        <li><a class="menuItem" href="restaurant.php">Restaurace</a></li>
+    </ul>
+    <button class="hamburger">
+        <img src="./img/icons/menu.png" alt="Menu" class="menuIcon"> 
+        <img src="./img/icons/menu_white.png" alt="Close" class="closeIcon" style="display: none;"> 
+    </button>
+</div>
+
+
 
 <footer>
     <a href="https://www.linkedin.com/in/vojt%C4%9Bch-michal/?trk=public-profile-join-page">
@@ -48,7 +49,36 @@
         <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge"/>
 
 
-</footer>
+    </footer>
+
+
+    <nav class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="#">Domů</a></li>
+            <li><a href="#">O nás</a></li>
+            <li><a href="#">Služby</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+    </nav>
+    
+    <script>
+const menuToggle = document.getElementById('mobile-menu');
+const navList = document.querySelector('.nav-list');
+
+menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('active');
+});
+
+
+
+    </script>
+
+
 
 </body>
 </html>

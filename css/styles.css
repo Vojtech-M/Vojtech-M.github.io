@@ -78,11 +78,14 @@ body{
   .photo img {
     max-width: 300px;
     border-radius: 10px;
+    transition: transform 0.5s ease;
   }
   .photo img:hover {
     transform: scale(1.2);
     transition: transform 0.5s ease;
   }
+
+
 
 
   .projects {

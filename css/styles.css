@@ -1,130 +1,129 @@
-* {
+body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-body {
-    background-color: rgb(235, 235, 235);
-}
-
-header {
-    background-color: rgb(41, 91, 255);
-    color: white;
-    text-align: center;
-    padding: 4rem;
-}
-
-#front_page_image {
-width: 100%;
-max-height: 50%;
-
-}
-
-
-
-footer{
-    margin-top: 10%;
-    display:flex;
-    justify-content: space-around;
-    color: white;
-    background-color: #0F4C75;
-    padding: 2rem;
-
-}
-
-article {
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    max-width: 1200px;
-    flex-wrap: wrap; 
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 30px auto; 
-}
-
-.left-text, .right-text {
-    flex: 1;
-    margin: 0 20px; 
-    padding: 20px;
-    text-align: justify;
-}
-
-
-
-
-/* Základní styly */
-body {
+    min-height: 100vh;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+    background-color: #324958;
+    color: #eee;
 
-/* Navigace */
-.navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #333;
-    padding: 15px;
+    flex-direction: column;
+    min-height: 100vh;
+
+
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Seznam navigačních odkazů */
-.nav-list {
-    list-style: none;
+*, *::before, *::after {
+    box-sizing: inherit;
+    font-family: inherit;
+}
+  
+  header {
     display: flex;
-}
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
 
-.nav-list li {
-    margin: 0 15px;
-}
 
-.nav-list a {
+
+
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+  
+  nav a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
-}
+    padding: 10px 15px;
+    background-color: #222;
+    border-radius: 5px;
+  }
+  
+  nav a:nth-child(1) { background-color: #002d40; }
+  nav a:nth-child(2) { background-color: #546e7a; }
+  nav a:nth-child(3) { background-color: #8bc34a; }
+  nav a:nth-child(4) { background-color: #ffc107; }
+  nav a:nth-child(5) { background-color: #f44336; }
+  nav a:nth-child(6) { background-color: #b71c1c; }
+  
+  .introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+  
+  .text {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .photo img {
+    max-width: 300px;
+    border-radius: 10px;
+  }
+  .photo img:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+  }
 
-/* Hamburger tlačítko */
-.menu-toggle {
-    display: none;
+
+  .projects {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .projects article {
+    display: flex;
     flex-direction: column;
-    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    background-color: rgb(26, 67, 92);
+    border-radius: rgb(22, 53, 71);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 20px;
+  }
+  .projects img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+
+
+
+
+footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 5%;
+
+
 }
-
-.bar {
-    background: white;
-    height: 3px;
-    width: 25px;
-    margin: 5px 0;
-}
-
-/* Responsivní styl */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background: #333;
-        text-align: center;
-    }
-
-    .nav-list.active {
-        display: flex;
-    }
-
-    .nav-list li {
-        padding: 15px 0;
-    }
-}
+    
+ 

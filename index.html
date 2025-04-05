@@ -1,80 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Vojtěch Michal</title>
-    <meta name="description" content="osobní stránka" >
-    <meta name="viewport" content="width=device-width, inital-scale=1.0">
-    <meta name="keywords" content="Vojtěch Michal, student, ČVUT, osobní stránka">
-    <link rel="stylesheet" href="./css/styles.css">
-    <meta name="google-site-verification" content="_2707PpkKwiksOeE0CiBdypB-cz02NhJ5FxmPbc-bAQ" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vojtěch Michal</title>
+  <link rel="stylesheet" href="/css/styles.css">
+    <meta name="description" content="Vojtěch Michal's personal website. FrontEnd developer, student at CTU FEE university.">
+    <meta name="keywords" content="Vojtěch Michal, student, ČVUT, personal website, FrontEnd developer">
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
 </head>
 <body>
-   
-<header>
- 
-</header>
-<img id="front_page_image"src="./img/front_page.jpg">
+  <header>
+    <h1>Vojtěch Michal</h1>
+    <nav>
+      <a href="#">Games</a>
+      <a href="#">Projects</a>
+    </nav>
+  </header>
 
-<article>
-    <div class="left_text">
-        <h1>Ahoj</h1>
-        <h2>Jmenuji se Vojtěch Michal a jsem studentem ČVUT FEL</h2>
+  <section class="introduction">
+    <div class="text">
+      <h2>About</h2>
+      <p> FrontEnd developer, from Czech Republic. Student of CTU FEE university.</p>
+        <p><strong>Get in touch</strong></p>
+        <p>Email: vojtamichal04@gmail.com</p>  
+      
+      
     </div>
-    
-</article>
-<p>Díky za návštěvuuu</p>
 
-<h3>Moje mapy</h3>
-<a href="https://mapy.cz/s/facasacata">Mapa</a>
-
-
-
-<div class="mobile_screens">
-    <ul class="menu">
-        <li><a class="menuItem" href="price_list.php">Ceník</a></li>
-        <li><a class="menuItem" href="restaurant.php">Restaurace</a></li>
-    </ul>
-    <button class="hamburger">
-        <img src="./img/icons/menu.png" alt="Menu" class="menuIcon"> 
-        <img src="./img/icons/menu_white.png" alt="Close" class="closeIcon" style="display: none;"> 
-    </button>
-</div>
+    <div class="photo">
+      <img src="/img/profile.jpg" alt="Portrait">
+    </div>
+  </section>
 
 
 
-<footer>
+<section class="projects">
+    <h2>My projects</h2>
+    <article>
+      <h3>This website</h3>
+      <p>Created using HTML, CSS, and JavaScript.</p>
+    </article>
+    <article>
+        <h3>Sonic and the World of Python</h3>
+        <p>Copy of sonic game using Python and pygame</p>
+        <img src="/img/sonic.png" alt="Sonic and the World of Python" >
+        <p>Tech used:</p>
+        <img src="/img/icons/python-original.svg" title="VSCode" alt="VSCode" width="50" height="50"/>&nbsp;
+      </article>
+      <article>
+        <h3> 🦆 QuackTrack</h3>
+        <p>Plugin to IntelliJ made on UnIt 2025 competetion. Still in progress</p>
+        <a href="https://github.com/Vojtech-M/QuackTrack">Github repo</a>
+      </article>
+
+
+      <article>
+        <h3>Tower defence game</h3>
+        <p>Created using HTML, CSS, and JavaScript. Semestral work for Javascript class. I am currently working on it.</p>
+        <a href="https://github.com/Vojtech-M/KAJ_Semestralni_prace">Github repo</a>
+      </article>
+
+      <article>
+        <h3>Semestral work for Fundamentals of Web Programming class </h3>
+        <p>Created using HTML, CSS, and JavaScript. My first Web page with logging in.</p>
+        <p>*I lost the last version, the current have a few bugs in admi rights </p>
+        <a href="https://github.com/Vojtech-M/ZWA_Semestralni_prace">Github repo</a>
+      </article>
+
+
+  </section>
+
+
+
+
+  <footer>
     <a href="https://www.linkedin.com/in/vojt%C4%9Bch-michal/?trk=public-profile-join-page">
         <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
        </a>
     <a href="https://github.com/devicons/devicon/blob/master/icons/github/github-original.svg">
         <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge"/>
-
-
-    </footer>
-
-    
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const menu = document.querySelector('.menu');
-        const menuItem = document.querySelectorAll('.menuItem');
-        const menuIcon = document.querySelector('.menuIcon');
-        const closeIcon = document.querySelector('.closeIcon');
-        
-        hamburger.addEventListener('click', () => {
-            menu.classList.toggle('menu--open');
-            menuIcon.style.display = 'none';
-            closeIcon.style.display = 'block';
-        });
-        
-        menuItem.forEach(item => {
-            item.addEventListener('click', () => {
-                menu.classList.remove('menu--open');
-                menuIcon.style.display = 'block';
-                closeIcon.style.display = 'none';
-            });
-        });
-
-    </script>
+</footer>
 
 
 

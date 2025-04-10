@@ -39,15 +39,99 @@
     <h2>My projects</h2>
     <article>
 
-      <form action="/submit" method="POST">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name"><br><br>
+    <form name="flight_form" method="post" class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label fw-bold required" for="flight_form_firstName">First Name:</label>
+                <input type="text" id="flight_form_firstName" name="flight_form[firstName]" required="required" placeholder="Enter First Name" class="form-control" />
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email"><br><br>
+                
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-bold required" for="flight_form_lastName">Last Name:</label>
+                <input type="text" id="flight_form_lastName" name="flight_form[lastName]" required="required" placeholder="Enter Last Name" class="form-control" />
 
-    <input type="submit" value="Send">
-  </form>
+                
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-bold required" for="flight_form_email">Email:</label>
+                <input type="text" id="flight_form_email" name="flight_form[email]" required="required" placeholder="Enter Email" class="form-control" />
+
+                
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-bold required" for="flight_form_birthDate">Birth Date:</label>
+                <input type="date" id="flight_form_birthDate" name="flight_form[birthDate]" required="required" placeholder="dd/mm/yyyy" class="form-control js-datepicker" />
+
+                
+            </div>
+            <div class="col-12">
+                <label class="form-label fw-bold required" for="flight_form_destination">Destination:</label>
+                <select id="flight_form_destination" name="flight_form[destination]" class="form-select"><option value="Berlin">Berlin</option><option value="Paris">Paris</option><option value="London">London</option><option value="New York">New York</option><option value="New Delhi">New Delhi</option></select>
+
+                
+            </div>
+            <div class="col-12">
+                <label class="form-label fw-bold required">Discount:</label>
+                <div>
+                                            <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="flight_form_discount_0">Student</label>
+                            <input 
+                                class="form-check-input"
+                                type="radio" 
+                                value="Student" 
+                                id="flight_form_discount_0" 
+                                name="flight_form[discount]" 
+                             
+                            >
+                        </div>
+                                            <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="flight_form_discount_1">Senior</label>
+                            <input 
+                                class="form-check-input"
+                                type="radio" 
+                                value="Senior" 
+                                id="flight_form_discount_1" 
+                                name="flight_form[discount]" 
+                             
+                            >
+                        </div>
+                                            <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="flight_form_discount_2">Coupon</label>
+                            <input 
+                                class="form-check-input"
+                                type="radio" 
+                                value="Coupon" 
+                                id="flight_form_discount_2" 
+                                name="flight_form[discount]" 
+                             
+                            >
+                        </div>
+                                            <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="flight_form_discount_3">None</label>
+                            <input 
+                                class="form-check-input"
+                                type="radio" 
+                                value="None" 
+                                id="flight_form_discount_3" 
+                                name="flight_form[discount]" 
+                             
+                            >
+                        </div>
+                                    </div>
+                
+            </div>
+            
+            <hr class="bg-secondary border-2 border-top border-secondary">
+
+            <div class="col-12">
+                <p>By making the order you agree to our <a href="#">Terms &amp; Privacy.</a></p>
+            </div>
+            <div class="col-12">
+                <button type="submit" id="flight_form_submit" name="flight_form[submit]" class="btn btn-primary">Complete order</button>
+            </div>
+
+                        <input type="hidden" id="flight_form__token" name="flight_form[_token]" value="a3843e3d.R9O2XwbnzFPZUenIkoo--dLNgo2JPFuMxAY0AE4fox8.PYrZaDOypgOrNKP-8Pp3qpeosLvIeGrr91FySC9Oy14mm48LT8r1N50muA" />
+        </form>
 
       
       <h3>This website</h3>

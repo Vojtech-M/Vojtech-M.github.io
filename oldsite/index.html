@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vojtěch Michal</title>
+  <link rel="stylesheet" href="/css/styles.css">
+    <meta name="description" content="Vojtěch Michal's personal website. FrontEnd developer, student at CTU FEE university.">
+    <meta name="keywords" content="Vojtěch Michal, student, ČVUT, personal website, FrontEnd developer">
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>Vojtěch Michal</h1>
+    <nav>
+      <a href="https://vojtech-m.github.io/KAJ_Semestralni_prace/">Games</a>
+      <a href="KAJ_Semestralni_prace/">Projects</a>
+    </nav>
+  </header>
+
+  <section class="introduction">
+    <div class="text">
+      <h2>About</h2>
+      <p>Frontend developer, from Czech Republic. Student of CTU FEE university.</p>
+        <p><strong>Get in touch</strong></p>
+        <p>Email: vojtamichal04@gmail.com</p>  
+      
+      
+    </div>
+
+    <div class="photo">
+      <img src="/img/profile.jpg" alt="Portrait">
+    </div>
+  </section>
+
+
+
+<section class="projects">
+    <h2>My projects</h2>
+    <article>
+
+    <form name="flight_form" method="post" class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label fw-bold required" for="flight_form_firstName">First Name:</label>
+                <input type="text" id="flight_form_firstName" name="flight_form[firstName]" required="required" placeholder="Enter First Name" class="form-control" />
+
+                
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-bold required" for="flight_form_lastName">Last Name:</label>
+                <input type="text" id="flight_form_lastName" name="flight_form[lastName]" required="required" placeholder="Enter Last Name" class="form-control" />
+
+                
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-bold required" for="flight_form_email">Email:</label>
+                <input type="text" id="flight_form_email" name="flight_form[email]" required="required" placeholder="Enter Email" class="form-control" />
+
+                
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-bold required" for="flight_form_birthDate">Birth Date:</label>
+                <input type="date" id="flight_form_birthDate" name="flight_form[birthDate]" required="required" placeholder="dd/mm/yyyy" class="form-control js-datepicker" />
+
+                
+            </div>
+            <div class="col-12">
+                <label class="form-label fw-bold required" for="flight_form_destination">Destination:</label>
+                <select id="flight_form_destination" name="flight_form[destination]" class="form-select"><option value="Berlin">Berlin</option><option value="Paris">Paris</option><option value="London">London</option><option value="New York">New York</option><option value="New Delhi">New Delhi</option></select>
+
+                
+            </div>
+            <div class="col-12">
+                <label class="form-label fw-bold required">Discount:</label>
+                <div>
+                                            <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="flight_form_discount_0">Student</label>
+                            <input 
+                                class="form-check-input"
+                                type="radio" 
+                                value="Student" 
+                                id="flight_form_discount_0" 
+                                name="flight_form[discount]" 
+                             
+                            >
+                        </div>
+                                            <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="flight_form_discount_1">Senior</label>
+                            <input 
+                                class="form-check-input"
+                                type="radio" 
+                                value="Senior" 
+                                id="flight_form_discount_1" 
+                                name="flight_form[discount]" 
+                             
+                            >
+                        </div>
+                                            <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="flight_form_discount_2">Coupon</label>
+                            <input 
+                                class="form-check-input"
+                                type="radio" 
+                                value="Coupon" 
+                                id="flight_form_discount_2" 
+                                name="flight_form[discount]" 
+                             
+                            >
+                        </div>
+                                            <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="flight_form_discount_3">None</label>
+                            <input 
+                                class="form-check-input"
+                                type="radio" 
+                                value="None" 
+                                id="flight_form_discount_3" 
+                                name="flight_form[discount]" 
+                             
+                            >
+                        </div>
+                                    </div>
+                
+            </div>
+            
+            <hr class="bg-secondary border-2 border-top border-secondary">
+
+            <div class="col-12">
+                <p>By making the order you agree to our <a href="#">Terms &amp; Privacy.</a></p>
+            </div>
+            <div class="col-12">
+                <button type="submit" id="flight_form_submit" name="flight_form[submit]" class="btn btn-primary">Complete order</button>
+            </div>
+
+                        <input type="hidden" id="flight_form__token" name="flight_form[_token]" value="a3843e3d.R9O2XwbnzFPZUenIkoo--dLNgo2JPFuMxAY0AE4fox8.PYrZaDOypgOrNKP-8Pp3qpeosLvIeGrr91FySC9Oy14mm48LT8r1N50muA" />
+        </form>
+
+      
+      <h3>This website</h3>
+      <p>Created using HTML, CSS, and JavaScript.</p>
+    </article>
+    <article>
+        <h3>Sonic and the World of Python</h3>
+        <p>Copy of sonic game using Python and pygame</p>
+        <img src="/img/sonic.png" alt="Sonic and the World of Python" >
+        <p>Tech used:</p>
+        <img src="/img/icons/python-original.svg" title="VSCode" alt="VSCode" width="50" height="50"/>&nbsp;
+      </article>
+      <article>
+        <h3> 🦆 QuackTrack</h3>
+        <p>Plugin to IntelliJ made on UnIt 2025 competetion. Still in progress</p>
+        <a href="https://github.com/Vojtech-M/QuackTrack">Github repo</a>
+      </article>
+
+
+      <article>
+        <h3>Tower defence game</h3>
+        <p>Created using HTML, CSS, and JavaScript. Semestral work for Javascript class. I am currently working on it.</p>
+        <a href="https://github.com/Vojtech-M/KAJ_Semestralni_prace">Github repo</a>
+      </article>
+
+      <article>
+        <h3>Semestral work for Fundamentals of Web Programming class </h3>
+        <p>Created using HTML, CSS, and JavaScript. My first Web page with logging in.</p>
+        <p>*I lost the last version, the current have a few bugs in admi rights </p>
+        <a href="https://github.com/Vojtech-M/ZWA_Semestralni_prace">Github repo</a>
+      </article>
+
+
+  </section>
+
+
+
+
+  <footer>
+    <a href="https://www.linkedin.com/in/vojt%C4%9Bch-michal/?trk=public-profile-join-page">
+        <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+       </a>
+    <a href="https://github.com/devicons/devicon/blob/master/icons/github/github-original.svg">
+        <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge"/>
+</footer>
+
+
+
+</body>
+</html>

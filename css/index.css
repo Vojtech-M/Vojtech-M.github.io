@@ -1,0 +1,410 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Make the body fill the entire viewport */
+    counter-reset: levels; /* Initialize the counter */
+}
+
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    font-family: inherit;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    padding: 5px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    z-index: 1;
+}
+
+canvas {
+    display: block;
+    border: 2px solid white;
+    background-color: #333;
+    margin: 10px 0;
+}
+
+#money {
+    color: #1db309;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+#money::before {
+    content: "💰";
+    margin-right: 5px;
+}
+
+
+#lives {
+    color: #d9300a;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+} 
+#lives::before {
+    content: "❤️";
+    margin-right: 5px;
+}
+
+
+
+.modal-content button[id^="level"] {
+    background-color: #1db309;
+    place-items: center;
+    align-self: center;
+    color: white;
+    border: 2px rgb(6, 56, 6);
+    padding: 10px;
+    margin: 5px 0;
+    width: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    counter-increment:levels;
+}
+
+.modal button[id^="level"]:nth-child(even) {
+    background-color: #1db309;
+  }
+  
+.modal-content button[id^="level"]:hover {
+    background-color: #128b02;
+}
+.modal-content button[id^="level"]::before {
+    content:counter(levels)"."
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    bottom: 0;
+    left: 0;
+    height:5%;
+    width: 100%;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+    z-index: 1;
+}
+
+.hud {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-size: 1.2em;
+    border: 2px solid white;
+    background-color: #333;
+    margin: 20px;
+    padding: 10px;
+    height: 90%;
+    width: 10%;
+
+}
+
+.hud button {
+    background-color: #1db309;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+
+.hud button ~ p {
+    font-size: 1.1em;
+    color: yellow;
+    text-align: center;
+}
+
+#game {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    background-color: rgb(87, 154, 248);
+    flex-grow: 1; 
+    padding: 5% 0;
+}
+
+.menu {
+    position: fixed;
+    padding: 20px;
+    left: 100%;
+    top: 20%;
+    color: white;
+    height: 60%;
+    width: 200px;
+    transition: transform 0.5s ease-out;
+    background-color: rgb(123, 182, 250);
+    z-index: 1;
+}
+#musicVolume {
+    -webkit-appearance: none; /* Remove default styling */
+    height: 8px;
+    background: #252cff;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+.menu h2 + li {
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    margin: 10px 0;
+    list-style: none;
+}
+
+body.menu-visible .menu {
+    transform: translateX(-100%);
+}
+
+article .menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1db309;
+    color: white;
+    border: 2px rgb(6, 56, 6);
+    padding: 10px;
+    margin: 5px 0;
+    width: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+.menu-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+
+#volumeIcon {
+    position: relative;
+    top: 42px;
+}
+
+body.modal-visible .page-wrapper {}
+
+.modal {
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 10%;     
+    left: 0;
+    width: 100%;
+    height: 85%; 
+    padding: 16px;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px) grayscale(0.5);
+    transition: backdrop-filter 4s ease-out;
+    -moz-transition: backdrop-filter 4s ease-out;
+    overflow: auto;   /* In case content is larger */
+}
+
+.modal-content {
+    background-color: rgb(28, 116, 216);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+    margin-top: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+
+
+
+body.modal-visible .modal {
+    visibility: hidden;
+}
+
+.level_buttons{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    gap: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 20px;
+    margin: 0 auto;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.15); /* subtle transparent background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box; /* include padding and border in element's total width */
+    transition: border-color 0.3s ease;
+}
+input[type="text"]:focus {
+    border-color: #1db309;
+    outline: none; /* remove default outline */
+}
+input[type="text"]::placeholder {
+    color: #aaa; /* Placeholder text color */
+    font-style: italic; /* Italicize placeholder text */
+}
+input[type="text"]:focus::placeholder {
+    color: transparent; /* Hide placeholder text on focus */
+}
+input[type="text"]:not(:placeholder-shown) {
+    color: #0c0233; /* Change text color when input is not empty */
+}
+
+label {
+    font-size: 1.2em;
+    color: #fff; /* Default label color */
+    transition: color 0.3s ease;
+    margin-bottom: 5px; /* Space between label and input */
+}
+form button {
+    background-color: #1db309;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #128b02;
+  }
+
+
+
+.hint-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between image and heading */
+}
+
+
+body.modal-visible .modal-content {
+    background: rgb(186, 2, 2);
+}
+
+#custom-checkbox {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: rgb(12, 1, 37);
+    border-radius: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#custom-checkbox::before {
+    display: block;
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+    left: 0;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+#custom-checkbox-input:checked + #custom-checkbox::before {
+    background-color: green;
+    left: 100%;
+    transform: translateX(-100%);
+}
+
+#custom-checkbox-input {
+    display: none;
+}
+
+#githubLink {
+    color: white;
+    font-size: 1.2em;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    #game {
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .hud {
+        width: 100%;
+        margin: 10px 0;
+        height: auto;
+    }
+
+    canvas {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    footer {
+        font-size: 0.7em;
+        padding: 5px;
+    }
+
+    #custom-checkbox {
+        width: 50px;
+        height: 25px;
+    }
+
+    #custom-checkbox::before {
+        width: 25px;
+        height: 25px;
+    }
+}

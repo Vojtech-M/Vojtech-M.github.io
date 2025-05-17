@@ -1,184 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vojtěch Michal</title>
-  <link rel="stylesheet" href="/css/styles.css">
-    <meta name="description" content="Vojtěch Michal's personal website. FrontEnd developer, student at CTU FEE university.">
-    <meta name="keywords" content="Vojtěch Michal, student, ČVUT, personal website, FrontEnd developer">
-    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <title>Tower Defense Game</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Vojtěch Michal">
+    <meta name="description" content="Semestrální práce KAJ">
+    <meta name="keywords" content="KAJ, semestrální práce, Tower Defense Game">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" id="favicon" type="image/png" href="./assets/img/tower.png">
+    <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
-  <header>
-    <h1>Vojtěch Michal</h1>
-    <nav>
-      <a href="https://vojtech-m.github.io/KAJ_Semestralni_prace/">Games</a>
-      <a href="KAJ_Semestralni_prace/">Projects</a>
+    <header>
+        <h1>Tower Defense Game</h1>
+    </header>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <nav class="menu">
+        <h2>Hudba</h2>
+                <input id="custom-checkbox-input" type="checkbox">
+                <label id="custom-checkbox" for="custom-checkbox-input"></label>
+                <input id="musicVolume" type="range" min="1" max="100">
+        <p>Hlasitost</p>
+   
+        <img id="volumeIcon" src="./assets/img/icons/speaker.png" alt="volume icon" width="50px">
+        <svg id="volumeTriengle" height="220" width="100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="0,220 500,220 500,0" style="fill:lime;stroke:green;stroke-width:3" />
+        </svg>
     </nav>
-  </header>
 
-  <section class="introduction">
-    <div class="text">
-      <h2>About</h2>
-      <p>Frontend developer, from Czech Republic. Student of CTU FEE university.</p>
-        <p><strong>Get in touch</strong></p>
-        <p>Email: vojtamichal04@gmail.com</p>  
-      
-      
-    </div>
+    <div class="modal">
+        <div class="modal-content">
 
-    <div class="photo">
-      <img src="/img/profile.jpg" alt="Portrait">
-    </div>
-  </section>
+            <article>
+                <h2>Vítej ve hře<span id="greeting"></span></h2>
 
+                <p id="hint">Zde je pár tipů, jak začít:</p>
+                <ul>
+                    <li>Vyber si úroveň, kterou chceš hrát.</li>
+                    <li>Umísti věže na mapu, abys zastavil nepřátele. Kliknutím nebo Drag & Drop</li>
+                </ul>
+                <form id="nameForm">
+                    <label for="name">Zadejte své jméno:</label>
+                    <input type="text" id="name" name="name" placeholder="Martin" required>
+                    <button id="submitName">Odeslat</button>
+                    <p id="error" style="color: red;"></p>
+                </form>
 
+                <p>Zajímavosti dnešního dne:</p>
+                <div class="hint-container">
+                    <img src="./assets/img/icons/lightbulb.png" alt="lightbulb" id="hintIcon" width="50px">
+                    <h3 id="svatek">Načítání svátku...</h3>
+                </div>
+                <p id="christmas"></p>
+                <p id="greeting"></p>
 
-<section class="projects">
-    <h2>My projects</h2>
-    <article>
-
-    <form name="flight_form" method="post" class="row g-3">
-            <div class="col-md-6">
-                <label class="form-label fw-bold required" for="flight_form_firstName">First Name:</label>
-                <input type="text" id="flight_form_firstName" name="flight_form[firstName]" required="required" placeholder="Enter First Name" class="form-control" />
-
-                
-            </div>
-            <div class="col-md-6">
-                <label class="form-label fw-bold required" for="flight_form_lastName">Last Name:</label>
-                <input type="text" id="flight_form_lastName" name="flight_form[lastName]" required="required" placeholder="Enter Last Name" class="form-control" />
-
-                
-            </div>
-            <div class="col-md-6">
-                <label class="form-label fw-bold required" for="flight_form_email">Email:</label>
-                <input type="text" id="flight_form_email" name="flight_form[email]" required="required" placeholder="Enter Email" class="form-control" />
-
-                
-            </div>
-            <div class="col-md-6">
-                <label class="form-label fw-bold required" for="flight_form_birthDate">Birth Date:</label>
-                <input type="date" id="flight_form_birthDate" name="flight_form[birthDate]" required="required" placeholder="dd/mm/yyyy" class="form-control js-datepicker" />
-
-                
-            </div>
-            <div class="col-12">
-                <label class="form-label fw-bold required" for="flight_form_destination">Destination:</label>
-                <select id="flight_form_destination" name="flight_form[destination]" class="form-select"><option value="Berlin">Berlin</option><option value="Paris">Paris</option><option value="London">London</option><option value="New York">New York</option><option value="New Delhi">New Delhi</option></select>
-
-                
-            </div>
-            <div class="col-12">
-                <label class="form-label fw-bold required">Discount:</label>
-                <div>
-                                            <div class="form-check form-check-inline">
-                            <label class="form-check-label" for="flight_form_discount_0">Student</label>
-                            <input 
-                                class="form-check-input"
-                                type="radio" 
-                                value="Student" 
-                                id="flight_form_discount_0" 
-                                name="flight_form[discount]" 
-                             
-                            >
-                        </div>
-                                            <div class="form-check form-check-inline">
-                            <label class="form-check-label" for="flight_form_discount_1">Senior</label>
-                            <input 
-                                class="form-check-input"
-                                type="radio" 
-                                value="Senior" 
-                                id="flight_form_discount_1" 
-                                name="flight_form[discount]" 
-                             
-                            >
-                        </div>
-                                            <div class="form-check form-check-inline">
-                            <label class="form-check-label" for="flight_form_discount_2">Coupon</label>
-                            <input 
-                                class="form-check-input"
-                                type="radio" 
-                                value="Coupon" 
-                                id="flight_form_discount_2" 
-                                name="flight_form[discount]" 
-                             
-                            >
-                        </div>
-                                            <div class="form-check form-check-inline">
-                            <label class="form-check-label" for="flight_form_discount_3">None</label>
-                            <input 
-                                class="form-check-input"
-                                type="radio" 
-                                value="None" 
-                                id="flight_form_discount_3" 
-                                name="flight_form[discount]" 
-                             
-                            >
-                        </div>
-                                    </div>
-                
-            </div>
             
-            <hr class="bg-secondary border-2 border-top border-secondary">
+                <section class="level_buttons">
+                    <button class="menu-button">
+                        <img src="./assets/img/icons/gears.png" alt="close" id="closeModal">Nastavení
+                    </button>
+    
+        
+                    <button id="level1" class="modal-button">
+                        level
+                    </button>
+                    <button id="level2" class="modal-button">
+                        level
+                    </button>
+                    <button id="level3" class="modal-button">
+                        level
+                    </button>
+                    <button id="level4" class="modal-button">
+                        level
+                    </button>
+                </section>
 
-            <div class="col-12">
-                <p>By making the order you agree to our <a href="#">Terms &amp; Privacy.</a></p>
-            </div>
-            <div class="col-12">
-                <button type="submit" id="flight_form_submit" name="flight_form[submit]" class="btn btn-primary">Complete order</button>
-            </div>
+            </article>
+        </div>
+    </div>
 
-                        <input type="hidden" id="flight_form__token" name="flight_form[_token]" value="a3843e3d.R9O2XwbnzFPZUenIkoo--dLNgo2JPFuMxAY0AE4fox8.PYrZaDOypgOrNKP-8Pp3qpeosLvIeGrr91FySC9Oy14mm48LT8r1N50muA" />
-        </form>
+    <section id="game">
 
-      
-      <h3>This website</h3>
-      <p>Created using HTML, CSS, and JavaScript.</p>
-    </article>
-    <article>
-        <h3>Sonic and the World of Python</h3>
-        <p>Copy of sonic game using Python and pygame</p>
-        <img src="/img/sonic.png" alt="Sonic and the World of Python" >
-        <p>Tech used:</p>
-        <img src="/img/icons/python-original.svg" title="VSCode" alt="VSCode" width="50" height="50"/>&nbsp;
-      </article>
-      <article>
-        <h3> 🦆 QuackTrack</h3>
-        <p>Plugin to IntelliJ made on UnIt 2025 competetion. Still in progress</p>
-        <a href="https://github.com/Vojtech-M/QuackTrack">Github repo</a>
-      </article>
+        <div class="hud">
+            <p id="timer">Time: 0:00</p>
 
+            <button id="nextWaveButton">Spawn 1 enemy</button>
+            <button class="menu-button">
+                <img src="./assets/img/icons/gears.png" alt="close" id="closeModal">Nastavení
+            </button>
 
-      <article>
-        <h3>Tower defence game</h3>
-        <p>Created using HTML, CSS, and JavaScript. Semestral work for Javascript class. I am currently working on it.</p>
-        <a href="https://github.com/Vojtech-M/KAJ_Semestralni_prace">Github repo</a>
-      </article>
+            <button class="modal-button" id="stopGameButton"> Levels </button>
+            <p id="money">Money: $0</p>
+            <p id="lives">Lives: 0</p>
 
-      <article>
-        <h3>Semestral work for Fundamentals of Web Programming class </h3>
-        <p>Created using HTML, CSS, and JavaScript. My first Web page with logging in.</p>
-        <p>*I lost the last version, the current have a few bugs in admi rights </p>
-        <a href="https://github.com/Vojtech-M/ZWA_Semestralni_prace">Github repo</a>
-      </article>
+        </div>
 
+        <canvas id="gameCanvas" width="768" height="512"></canvas>
 
-  </section>
+        <div class="hud">
+            <img class="towerIcon" src="./assets/img/tower.png" alt="tower Icon" draggable="true"
+                style="width: 64px; cursor: grab;">
+            <p>Basic tower 20 $</p>
+        </div>
 
+    </section>
 
+    <footer>
+        <p>&copy; 2021 Vojtěch Michal</p>
+        <a id="githubLink" href="https://github.com/Vojtech-M/KAJ_Semestralni_prace"> GitHub</a>
+        <img src="./assets/img/icons/javascript-original.svg" alt="JavaScript logo" width="32px">
+    </footer>
 
-
-  <footer>
-    <a href="https://www.linkedin.com/in/vojt%C4%9Bch-michal/?trk=public-profile-join-page">
-        <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
-       </a>
-    <a href="https://github.com/devicons/devicon/blob/master/icons/github/github-original.svg">
-        <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge"/>
-</footer>
-
-
-
+    <script src="js/app.js" type="module"></script>
 </body>
+
 </html>

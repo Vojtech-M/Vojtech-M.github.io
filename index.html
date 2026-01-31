@@ -1,13 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vojtěch Michal</title>
+  
+  <title>Vojtěch Michal | Frontend Developer & Student</title>
+  
   <link rel="stylesheet" href="/css/styles.css">
-    <meta name="description" content="Vojtěch Michal's personal website. FrontEnd developer, student at CTU FEE university.">
-    <meta name="keywords" content="Vojtěch Michal, student, ČVUT, personal website, FrontEnd developer">
-    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+  
+  <meta name="description" content="Official website of Vojtěch Michal. Frontend developer specializing in React/JS and student at CTU FEE (ČVUT FEL). View my projects and resume.">
+  
+  <meta name="keywords" content="Vojtěch Michal, student, ČVUT, personal website, FrontEnd developer">
+  
+  <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+
+  <script>
+  fetch('/schema.json')
+    .then(response => response.json())
+    .then(data => {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(data);
+      document.head.appendChild(script);
+    });
+</script>
+
 </head>
 <body>
   <header>
@@ -15,8 +30,14 @@
     <nav>
       <a href="#">Games</a>
       <a href="#">Projects</a>
+      <a href="#">Projects</a>
+      <a href="#">Projects</a>
+      <a href="#">Projects</a>
+
     </nav>
   </header>
+
+
 
   <section class="introduction">
     <div class="text">
@@ -35,6 +56,21 @@
 
 
 
+
+<!--
+ <div class="divider">
+    <p>-------------------</p>
+    -->
+
+<!-- GitHub Repositories Section -->
+ <section class="github-repos">
+  <h1>My GitHub Projects</h1>
+    
+    <div id="repo-container"></div>
+ </section>
+
+
+ <!--
 <section class="projects">
     <h2>My projects</h2>
     <article>
@@ -72,6 +108,7 @@
 
   </section>
 
+-->
 
 
 
@@ -83,7 +120,6 @@
         <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge"/>
 </footer>
 
-
-
+<script src="/js/app.js"></script>
 </body>
 </html>

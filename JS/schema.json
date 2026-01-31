@@ -1,0 +1,17 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Vojtěch Michal",
+  "url": "https://your-website-url.com",
+  "image": "https://your-website-url.com/img/profile-pic.jpg",
+  "jobTitle": "Frontend Developer",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Czech Technical University in Prague (ČVUT)"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/vojtech-michal",
+    "https://github.com/vojtech-michal",
+    "https://twitter.com/yourhandle"
+  ]
+}

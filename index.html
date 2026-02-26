@@ -13,8 +13,8 @@
   <link rel="icon" href="img/favicon.png" type="image/x-icon">
 
   <script>
-  fetch('schema.json')
-    .then(response => response.json())
+    fetch('./schema.json') 
+  .then(response => response.json())
     .then(data => {
       const script = document.createElement('script');
       script.type = 'application/ld+json';
